@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """ using the sorted function to sort a dictionary. """
 
 
