@@ -34,6 +34,7 @@ class Square:
         # Public instance method that prints in stdout the square with the #
         if self.size == 0:
             print()
+            return
         else:
             for index1 in range(self.position[1]):
                 print()
