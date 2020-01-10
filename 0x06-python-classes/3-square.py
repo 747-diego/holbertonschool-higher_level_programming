@@ -8,6 +8,6 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-    # Public instance method: that returns the current square area
-     def area(self):
-         return self.__size ** 2
+    def area(self):
+        # Public instance method: that returns the current square area
+        return self.__size ** 2
