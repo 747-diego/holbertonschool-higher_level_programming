@@ -30,6 +30,20 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    def my_print(self):
+        # Public instance method that prints in stdout the square with the #
+        if self.size == 0:
+            print()
+        else:
+            for index1 in range(self.__position[1]):
+                print()
+            for index2 in range(self.__size):
+                for columnspace in range(self.__position[0]):
+                    print(" ", end='')
+                for hashtag in range(self.__size):
+                    print('#', end='')
+                print()
+
     @property
     def position(self):
         return self.__position
@@ -44,18 +58,3 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-
-
-def my_print(self):
-    # Public instance method that prints in stdout the square with the #
-    if self.size == 0:
-        print()
-    else:
-        for index1 in range(self.__position[1]):
-            print()
-        for index2 in range(self.__size):
-            for columnspace in range(self.__position[0]):
-                print(" ", end='')
-            for hashtag in range(self.__size):
-                print('#', end='')
-            print()
