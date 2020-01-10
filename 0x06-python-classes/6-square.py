@@ -37,10 +37,10 @@ class Square:
         else:
             for index1 in range(self.position[1]):
                 print()
-            for index2 in range(self.size):
+            for index2 in range(self.__size):
                 for columnspace in range(self.position[0]):
                     print(" ", end='')
-                for hashtag in range(self.size):
+                for hashtag in range(self.__size):
                     print('#', end='')
                 print()
 
