@@ -34,14 +34,13 @@ class Square:
         # Public instance method that prints in stdout the square with the #
         if self.size == 0:
             print()
-            return
         else:
             for index1 in range(self.position[1]):
                 print()
             for index2 in range(self.size):
                 for columnspace in range(self.position[0]):
                     print(" ", end='')
-                for s in range(self.size):
+                for hashtag in range(self.size):
                     print('#', end='')
                 print()
 
@@ -53,8 +52,8 @@ class Square:
     def position(self, value):
         if len(value) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if isinstance(value[0], int) is false or value[0] < 0:
+        elif isinstance(value[0], int) is false or value[0] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if isinstance(value[1], int) is false or value[1] < 0:
+        elif isinstance(value[1], int) is false or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
