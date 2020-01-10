@@ -28,7 +28,7 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def my_print(self):
-        # Public instance method that prints in stdout the square with the character #
+        # Public instance method that prints in stdout the square with the #
         if self.size == 0:
             print()
         SquareSize = self.size
