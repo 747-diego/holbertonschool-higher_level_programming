@@ -82,5 +82,5 @@ class Rectangle:
         return "Rectangle(" + StringWidth + "," + StringHeight + ")"
 
     def __del__(self):
-        """Returns an instance of Rectangle when its deleted"""
+        """Return an instance of Rectangle when its deleted."""
         print("Bye rectangle...")
