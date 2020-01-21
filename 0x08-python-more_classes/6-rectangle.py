@@ -5,10 +5,14 @@
 class Rectangle:
     """Class on Rectangles."""
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """Instantiate with width and height."""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):

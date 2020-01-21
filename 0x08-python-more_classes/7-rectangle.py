@@ -10,8 +10,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Instantiate with width and height."""
-        self.width = width
         self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     @property
