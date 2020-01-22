@@ -2,8 +2,8 @@
 """TASK 1 Number of Lines."""
 
 
-def read_file(filename=""):
-    """Read function that reads a text file (UTF8) and prints it to stdout."""
+def number_of_lines(filename=""):
+    """Number function that returns the number of lines of a text file."""
     if filename == "":
         pass
     NumberOfLines = 0
