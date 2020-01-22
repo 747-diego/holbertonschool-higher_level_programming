@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""TASK 6 From JSON string to Object."""
+"""TASK 7 Save Object to a file."""
 
 import json
 
