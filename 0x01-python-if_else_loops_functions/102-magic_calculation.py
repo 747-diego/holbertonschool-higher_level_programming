@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-def magic_calculation(a, b, c):
-    if a < b:
-        return c
-    elif c > b:
-        return a + b
-    return a * b - c
+from magic_calculation_102 import add, sub
+
+    if Num1 < Num2:
+        outcome = add(Num1, Num2)
+        for index in range(4, 6):
+            outcome = add(outcome, index)
+        return outcome
+    return sub(Num1, Num2)
