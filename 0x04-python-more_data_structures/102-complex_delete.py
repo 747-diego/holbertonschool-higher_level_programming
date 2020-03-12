@@ -8,4 +8,3 @@ def complex_delete(a_dictionary, value):
         for SpecifiedValue in KeysList:
             del a_dictionary[SpecifiedValue]
     return a_dictionary
-    
