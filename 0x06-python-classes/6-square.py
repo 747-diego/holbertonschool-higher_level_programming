@@ -44,11 +44,11 @@ class Square:
 
     def my_print(self):
         # Public instance method that prints in stdout the square with the #
-        if self.size == 0:
+        if self.__size == 0:
             print()
-            return
         else:
             for index1 in range(self.__position[1]):
                 print()
             for index2 in range(self.__size):
                 print((" " * self.__position[0]) + ("#" * self.__size))
+            print()
