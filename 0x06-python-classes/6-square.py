@@ -51,8 +51,4 @@ class Square:
             for index1 in range(self.__position[1]):
                 print()
             for index2 in range(self.__size):
-                for columnspace in range(__self.position[0]):
-                    print(" ", end='')
-                for hashtag in range(self.__size):
-                    print('#', end='')
-                print()
+                print((" " * self.__position[0]) + ("#" * self.__size))
