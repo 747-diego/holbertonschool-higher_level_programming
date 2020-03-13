@@ -31,4 +31,3 @@ class Student:
         """Replace all attributes of the Student Instance."""
         for key, value in json.items():
             ReplacedAttr = self.__dict__.update(json)
-        ReplacedAttr
