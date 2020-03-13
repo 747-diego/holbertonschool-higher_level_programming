@@ -17,14 +17,12 @@ class Student:
         """Public method that retrieves a dictionary representation."""
         """"Of a Student instance."""
         ListOfAttrs = {}
-        if type(attrs) is list:
-            for index in range(len(attrs)):
-                if type(attrs[index]) is not str:
-                    return vars(self)
-        else:
-            for attribute, value in vars(self).items():
-                if type(attrs) is list:
-                    for index in attrs:
-                        if index is attribute:
-                            ListOfAttrs[attribute] = value
-        return vars(self)
+        if attrs is None:
+            return self.__dict__
+        ListOfAttrs = {}
+        for names in attrs:
+            name = hasattr(self, names)
+            if name:
+                nameGrabbed = getattr(self, names)
+                ListOfAttrs[names] = nameGrabbed
+        return ListOfAttrs
