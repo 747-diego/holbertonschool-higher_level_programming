@@ -31,4 +31,4 @@ class Student:
         """Replace all attributes of the Student Instance."""
         for key, value in json.items():
             ReplacedAttr = setattr(self, key, value)
-            return ReplacedAttr
+        return ReplacedAttr
