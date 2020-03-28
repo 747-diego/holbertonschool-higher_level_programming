@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""TASK 12 Student to JSON with Filter."""
+"""TASK 13 Student to disk and reload."""
 
 
 class Student:
@@ -26,3 +26,8 @@ class Student:
                 nameGrabbed = getattr(self, names)
                 ListOfAttrs[names] = nameGrabbed
         return ListOfAttrs
+
+    def reload_from_json(self, json):
+        """Replace all attributes of the Student Instance."""
+        for key, value in json.items():
+            ReplacedAttr = self.__dict__.update(json)
