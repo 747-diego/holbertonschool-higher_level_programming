@@ -15,9 +15,8 @@ if __name__ == "__main__":
                             passwd=MyPassword,
                             db=MyDataBase)
     cursor = table.cursor()
-    cursor.execute("SELECT * FROM states\
-                   WHERE states.name = '{}'\
-                   ORDER BY id ASC".format(UserInput[4]))
+    cursor.execute("SELECT * FROM states WHERE states.name = '{}'\
+                   ORDER BY id ASC".format(MyState))
 
     for record in cursor.fetchall():
         if record[1] == MyState:
