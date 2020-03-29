@@ -16,8 +16,8 @@ if __name__ == "__main__":
                             db=MyDataBase)
     cursor = table.cursor()
     cursor.execute("SELECT * FROM states\
-                   WHERE states.id = '{}'\
-                   ORDER BY id ASC".format(MyState))
+                   WHERE states.name = '{}'\
+                   ORDER BY states.id ASC".format(MyState))
 
     for record in cursor.fetchall():
         if record[1] == MyState:
