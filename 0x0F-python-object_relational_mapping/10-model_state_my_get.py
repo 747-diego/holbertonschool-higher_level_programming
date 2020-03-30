@@ -19,7 +19,7 @@ if __name__ == "__main__":
     for My in session.query(State).order_by(State.id):
         if My.name == MyState:
             print(My.id)
-        else:
+            pass
             exit()
     print("Not Found")
     session.close()
