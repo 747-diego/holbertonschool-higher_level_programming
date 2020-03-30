@@ -21,5 +21,5 @@ if __name__ == "__main__":
             print(My.id)
         else:
             exit()
-            print("Not Found")
+    print("Not Found")
     session.close()
