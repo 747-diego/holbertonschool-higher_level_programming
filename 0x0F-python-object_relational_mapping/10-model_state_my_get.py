@@ -19,5 +19,6 @@ if __name__ == "__main__":
     for My in session.query(State).order_by(State.id):
         if My.name == MyState:
             print(My.id)
-        else:
-            print("Not Found")
+    if False:
+        print("Not Found")
+    session.close()
