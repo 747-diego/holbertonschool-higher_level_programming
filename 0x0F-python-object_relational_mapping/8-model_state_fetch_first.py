@@ -16,9 +16,8 @@ if __name__ == "__main__":
     session = Session()
 
     FirstObject = session.query(State).order_by(State.id).first()
-    print("{}: {}".format(state.id, state.name))
 
     if FirstObject:
-        print("{}: {}".format(first.id, first.name))
+        print("{}: {}".format(FirstObject.id, FirstObject.name))
     else:
         print("Nothing")
