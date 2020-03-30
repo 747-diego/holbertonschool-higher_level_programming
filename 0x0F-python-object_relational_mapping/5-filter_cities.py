@@ -18,11 +18,11 @@ if __name__ == "__main__":
     cursor.execute("SELECT cities.name\
                    FROM cities\
                    JOIN states ON cities.state_id = states.id\
-                   WHERE states.name = %s ORDER BY cities.id ASC",(MyState, ))
+                   WHERE states.name = %s ORDER BY cities.id ASC", [MyState])
 
     CityNames = []
     for record in cursor.fetchall():
-        CityList.append(record[0])
+        CityNames.append(record[0])
     print(", ".join(CityNames))
 
     cursor.close()
