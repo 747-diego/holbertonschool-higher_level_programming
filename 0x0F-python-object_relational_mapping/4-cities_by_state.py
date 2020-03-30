@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Write a script that is safe from MySQL injections."""
+"""Write a script that lists all cities from the database hbtn_0e_4_usa."""
 if __name__ == "__main__":
     from sys import argv as UserInput
     import MySQLdb
@@ -15,7 +15,7 @@ if __name__ == "__main__":
                             passwd=MyPassword,
                             db=MyDataBase)
     cursor = table.cursor()
-    cursor.execute("SELECT * FROM cities\
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities\
                    JOIN states ON cities.states_id = states.id\
                    ORDER BY cities.id ASC")
 
