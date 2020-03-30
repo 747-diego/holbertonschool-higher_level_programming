@@ -17,4 +17,4 @@ if __name__ == "__main__":
 
     for MyState in session.query(State).order_by(State.id):
         if "a" in MyState.name:
-            print("{}: {}".format(FirstObject.id, FirstObject.name))
+            print("{}: {}".format(MyState.id, MyState.name))
