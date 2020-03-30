@@ -16,7 +16,7 @@ if __name__ == "__main__":
                             db=MyDataBase)
     cursor = table.cursor()
     cursor.execute("SELECT * FROM states\
-                   WHERE states.name = '{}'\
+                   WHERE states.name=%s\
                    ORDER BY states.id ASC".format(MyState))
 
     for record in cursor.fetchall():
