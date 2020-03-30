@@ -17,9 +17,8 @@ if __name__ == "__main__":
 
     Record = session.query(City, State).filter(City.state_id == State.id).all()
 
-    States = state.name
-    City = city.id
-    Name = city.name
-
     for city, state in Record:
-        print("{}: ({}) {}".format(States, City, Name))
+        States = state.name
+        Cities = city.id
+        Name = city.name
+        print("{}: ({}) {}".format(States, Cities, Name))
