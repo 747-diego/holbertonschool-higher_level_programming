@@ -16,6 +16,5 @@ if __name__ == "__main__":
     session = Session()
 
     Letter = State.name.contains("a")
-    Syncro = (synchronize_session=False)
-    session.query(State).filter(Letter).delete(Syncro)
+    session.query(State).filter(Letter).delete(synchronize_session=False)
     session.commit()
