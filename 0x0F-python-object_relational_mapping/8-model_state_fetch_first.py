@@ -15,8 +15,8 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    FirstObject = session.query(State).order_by(State.id).first():
-        print("{}: {}".format(state.id, state.name))
+    FirstObject = session.query(State).order_by(State.id).first()
+    print("{}: {}".format(state.id, state.name))
 
     if FirstObject:
         print("{}: {}".format(first.id, first.name))
