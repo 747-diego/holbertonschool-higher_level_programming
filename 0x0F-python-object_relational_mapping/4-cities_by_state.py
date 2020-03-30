@@ -15,12 +15,11 @@ if __name__ == "__main__":
                             passwd=MyPassword,
                             db=MyDataBase)
     cursor = table.cursor()
-    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities\
+    cursor.execute("SELECT * FROM cities\
                    JOIN states ON cities.states_id = states.id\
                    ORDER BY cities.id ASC")
 
     for record in cursor.fetchall():
-        if record[1] == MyState:
             print(record)
 
     cursor.close()
