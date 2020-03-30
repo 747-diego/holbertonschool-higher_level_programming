@@ -9,13 +9,12 @@ if __name__ == "__main__":
     MyName = UserInput[1]
     MyPassword = UserInput[2]
     MyDataBase = UserInput[3]
-    Id = 2
+    NewId = 2
 
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
                            .format(MyName, MyPassword, MyDataBase))
     Session = sessionmaker(engine)
     session = Session()
 
-    session.query(State).filter(State.id == Id)
-    update.name = 'New Mexico'
+    session.query(State).filter(State.id == NewId).update({"name": "New Mexico"})
     session.commit()
