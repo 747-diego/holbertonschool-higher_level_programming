@@ -17,9 +17,9 @@ if __name__ == "__main__":
     session = Session()
 
     My = session.query(State).filter(State.name == MyState).first()
-    if My.name:
+    if My.name == MyState:
         print(My.id)
     else:
-        print("Not Found")
+        print("Not found")
 
     session.close()
