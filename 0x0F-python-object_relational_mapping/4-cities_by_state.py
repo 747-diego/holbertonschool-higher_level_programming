@@ -20,7 +20,7 @@ if __name__ == "__main__":
                    ORDER BY cities.id ASC")
 
     for record in cursor.fetchall():
-            print(record)
+        print(record)
 
     cursor.close()
     table.close()
