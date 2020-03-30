@@ -15,7 +15,6 @@ if __name__ == "__main__":
                            .format(MyName, MyPassword, MyDataBase))
     Session = sessionmaker(engine)
     session = Session()
-
-    Id = query(State).filter(State.id == NewId).update({"name": "New Mexico"})
-    session.Id
+    IdName = {"name": "New Mexico"}
+    session.query(State).filter(State.id == NewId).update(IdName)
     session.commit()
