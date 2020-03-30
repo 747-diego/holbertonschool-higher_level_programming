@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cursor = table.cursor()
     cursor.execute("SELECT * FROM states\
                    WHERE name=%s\
-                   ORDER BY states.id ASC",(MyState, ))
+                   ORDER BY states.id ASC", (MyState, ))
 
     for record in cursor.fetchall():
         if record[1] == MyState:
