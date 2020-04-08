@@ -15,7 +15,11 @@ if __name__ == "__main__":
                             passwd=MyPassword,
                             db=MyDataBase)
     cursor = table.cursor()
+<<<<<<< HEAD
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+=======
     cursor.execute("SELECT * FROM states ORDER BY id ASC".format(MyState))
+>>>>>>> 6d048a36da541ad1e8740ae33b16a7809f0588ea
 
     for record in cursor.fetchall():
         if record[1] == MyState:

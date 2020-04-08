@@ -20,6 +20,10 @@ if __name__ == "__main__":
     if My:
         print(My.id)
     else:
+<<<<<<< HEAD
+        print("Not Found")
+=======
         print("Not found")
+>>>>>>> 6d048a36da541ad1e8740ae33b16a7809f0588ea
 
     session.close()
