@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class State(Base):
+class City(Base):
     """Inherits from Base links to the MySQL table cities."""
 
     __tablename__ = "cities"
