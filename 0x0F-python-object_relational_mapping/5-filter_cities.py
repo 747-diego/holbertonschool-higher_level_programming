@@ -18,7 +18,11 @@ if __name__ == "__main__":
     cursor.execute("SELECT cities.name\
                    FROM cities\
                    JOIN states ON cities.state_id = states.id\
+<<<<<<< HEAD
                    WHERE states.name = %s ORDER BY cities.id ASC", (MyState, ))
+=======
+                   WHERE states.name = %s ORDER BY cities.id ASC", [MyState])
+>>>>>>> 6d048a36da541ad1e8740ae33b16a7809f0588ea
 
     CityNames = []
     for record in cursor.fetchall():

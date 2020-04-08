@@ -16,6 +16,10 @@ if __name__ == "__main__":
     session = Session()
 
     FirstObject = session.query(State).order_by(State.id).first()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6d048a36da541ad1e8740ae33b16a7809f0588ea
     if FirstObject:
         print("{}: {}".format(FirstObject.id, FirstObject.name))
     else:

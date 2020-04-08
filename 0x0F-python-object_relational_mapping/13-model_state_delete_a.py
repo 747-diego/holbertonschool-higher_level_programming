@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Write a script that prints the object with the name passed as argument."""
+"""Write a script that deletes all State objects with letter a."""
 if __name__ == "__main__":
     from sys import argv as UserInput
     from model_state import Base, State
@@ -9,21 +9,12 @@ if __name__ == "__main__":
     MyName = UserInput[1]
     MyPassword = UserInput[2]
     MyDataBase = UserInput[3]
-    MyState = UserInput[4]
 
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
                            .format(MyName, MyPassword, MyDataBase))
     Session = sessionmaker(engine)
     session = Session()
 
-    My = session.query(State).filter(State.name == MyState).first()
-    if My:
-        print(My.id)
-    else:
-<<<<<<< HEAD
-        print("Not Found")
-=======
-        print("Not found")
->>>>>>> 6d048a36da541ad1e8740ae33b16a7809f0588ea
-
-    session.close()
+    Letter = State.name.contains("a")
+    session.query(State).filter(Letter).delete(synchronize_session=False)
+    session.commit()

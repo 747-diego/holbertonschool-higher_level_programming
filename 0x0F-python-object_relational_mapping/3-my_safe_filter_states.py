@@ -16,11 +16,20 @@ if __name__ == "__main__":
                             db=MyDataBase)
     cursor = table.cursor()
     cursor.execute("SELECT * FROM states\
+<<<<<<< HEAD
                    WHERE states.name = '{}'\
                    ORDER BY id ASC".format(MyState))
+=======
+                   WHERE name=%s\
+                   ORDER BY states.id ASC", (MyState, ))
+>>>>>>> 6d048a36da541ad1e8740ae33b16a7809f0588ea
 
     for record in cursor.fetchall():
         if record[1] == MyState:
             print(record)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6d048a36da541ad1e8740ae33b16a7809f0588ea
     cursor.close()
     table.close()
