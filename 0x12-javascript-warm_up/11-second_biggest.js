@@ -1,0 +1,9 @@
+#!/usr/bin/node
+const Numbers = process.argv.length;
+const BigNumTest = process.argv.slice(2).sort;
+if (Numbers <= 1) {
+  console.log(0);
+} else {
+  const CheckTest = BigNumTest((a, b) => b - a);
+  console.log(CheckTest[1]);
+}
