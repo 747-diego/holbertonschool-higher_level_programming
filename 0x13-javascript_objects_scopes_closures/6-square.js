@@ -1,6 +1,6 @@
 #!/usr/bin/node
-// Write a class Square that defines a square and inherits from 5-rectangle.js
-const Rectangle = require('./5-rectangle');
+// Write a class Square that defines a square and inherits from 5-square.js
+const Rectangle = require('./5-square');
 module.exports = class Square extends Rectangle {
   constructor (size) {
     super(size, size);
