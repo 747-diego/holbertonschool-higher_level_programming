@@ -8,7 +8,7 @@ module.exports = class Square extends Rectangle {
 
   //   instance method that prints the rectangle using the character c
   charPrint (c) {
-    c = 'X';
+    if (c === undefined) {c = 'X'};
     for (let idx = 0; idx < this.height; idx++) {
       console.log(c.repeat(this.width));
     }
