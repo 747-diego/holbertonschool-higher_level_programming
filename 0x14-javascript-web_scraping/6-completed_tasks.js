@@ -13,7 +13,7 @@ GettingRequest(content[2], (err, res, body) => {
   for (const tasks of BodyParse) {
     if (tasks.completed === true) {
       let TaskByUserID = TasksCompleted[tasks.userId];
-      if (TaskByUserID) {
+      if (TaskByUserID === true) {
         TaskByUserID++;
       } else {
         TaskByUserID = 1;
