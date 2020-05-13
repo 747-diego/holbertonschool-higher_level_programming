@@ -4,7 +4,7 @@
 
 const GettingRequest = require('request');
 const MovieID = process.argv[2];
-const MovieURL = 'http://swapi.co/api/films/' + MovieID;
+const MovieURL = 'https://swapi.co/api/films/' + MovieID;
 
 GettingRequest(MovieURL, (err, res, body) => {
   if (err) {
