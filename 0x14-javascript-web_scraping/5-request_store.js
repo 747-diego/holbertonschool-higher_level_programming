@@ -5,8 +5,8 @@ const GettingRequest = require('request');
 const content = process.argv;
 
 GettingRequest(content[2], (err, res, body) => {
-  if (error) {
-    console.log(error);
+  if (err) {
+    console.log(err);
   }
 
   fs.writeFile(content[3], body, (err) => {
