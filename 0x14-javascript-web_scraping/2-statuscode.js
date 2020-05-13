@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // Write a script that display the status code of a GET request.
 const GettingRequest = require('request');
-const RequestingURL = process.argv[1];
+const RequestingURL = process.argv[2];
 
 GettingRequest
   .get(RequestingURL)
