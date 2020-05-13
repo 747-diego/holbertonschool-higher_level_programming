@@ -11,7 +11,7 @@ GettingRequest(content[2], (err, res, body) => {
   const TasksCompleted = {};
   for (const tasks of JSON.parse(body)) {
     if (tasks.completed === true) {
-      let Id = tasks.userId;
+      const Id = tasks.userId;
       if (TasksCompleted) {
         TasksCompleted[Id] = TasksCompleted[Id] + 1;
       } else {
