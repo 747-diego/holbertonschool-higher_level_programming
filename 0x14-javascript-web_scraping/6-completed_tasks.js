@@ -9,8 +9,8 @@ GettingRequest(content[2], (err, res, body) => {
   }
 
   const TasksCompleted = {};
-  const body = JSON.parse(body);
-  for (const tasks of body) {
+  const BodyParse = JSON.parse(body);
+  for (const tasks of BodyParse) {
     if (tasks.completed === true) {
       let TaskByUserID = TasksCompleted[tasks.userId];
       if (TaskByUserID) {
