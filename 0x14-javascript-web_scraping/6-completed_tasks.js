@@ -19,5 +19,5 @@ GettingRequest(content[2], (err, res, body) => {
       }
     }
   }
-  console.log(TasksCompleted);
+  console.log(TaskByUserID);
 });
