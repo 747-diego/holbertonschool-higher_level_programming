@@ -13,9 +13,9 @@ GettingRequest(content[2], (err, res, body) => {
     if (tasks.completed === true) {
       const Id = tasks.userId;
       if (TasksCompleted) {
-        TasksCompleted[Id] = TasksCompleted[ID] + 1;
+        TasksCompleted[Id] = TasksCompleted[Id] + 1;
       } else {
-        TasksCompleted[ID] = 1;
+        TasksCompleted[Id] = 1;
       }
     }
   }
