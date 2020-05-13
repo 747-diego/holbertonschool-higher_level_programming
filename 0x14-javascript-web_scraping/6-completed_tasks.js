@@ -20,5 +20,5 @@ GettingRequest(content[2], (err, res, body) => {
     }
   }
 
-  console.log(TasksB);
+  console.log(TasksCompleted);
 });
