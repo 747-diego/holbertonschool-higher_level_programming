@@ -3,7 +3,7 @@
 // where the episode number matches a given integer.
 
 const GettingRequest = require('request');
-const MovieID = process.argv[1];
+const MovieID = process.argv[2];
 const MovieURL = 'http://swapi.co/api/films/' + MovieID;
 
 GettingRequest(MovieURL, (err, res, body) => {
