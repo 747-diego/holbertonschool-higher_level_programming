@@ -3,7 +3,7 @@
 const GettingRequest = require('request');
 const content = process.argv[2];
 
-GettingRequest(content, (err, _resp, body) => {
+GettingRequest(content, (err, _res, body) => {
   if (err) {
     console.log(err);
   }
