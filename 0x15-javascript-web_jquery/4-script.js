@@ -3,6 +3,6 @@
 // to red (#FF0000) when the user clicks on the tag DIV#toggle_header:
 $(function () {
     $('DIV#toggle_header').click(function () {
-      $('header').toggleClass('FF0000 #008000');
+      $('header').toggleClass('#FF0000 #008000');
     });
   });
